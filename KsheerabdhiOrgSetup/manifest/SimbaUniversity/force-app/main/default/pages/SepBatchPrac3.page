@@ -1,0 +1,18 @@
+<apex:page controller="accountHandler" lightningStylesheets="true" >
+    <apex:form >
+        <body style="background-color:#c61aff">
+            <apex:pageBlock >
+                <apex:pageBlockSection title="Get Account records">
+                    <apex:inputText label="Enter Account Name" value="{!accInputName}" /><br/>
+                    <apex:commandButton action="{!getRecords}" value="Search" /><br/>
+                    <apex:pageBlockTable value="{!acc}" var="a" >
+                        <apex:column value="{!a.Name}" />
+                        <apex:column value="{!a.id}" />
+                        <apex:column value="{!a.industry}" />
+                        <apex:column value="{!a.AnnualRevenue}" />
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </body>
+    </apex:form>
+</apex:page>

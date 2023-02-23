@@ -1,0 +1,22 @@
+<apex:page title="Insert Supplier" controller="Insert_Supplier" lightningStylesheets="true" >
+    <apex:form >
+        <apex:pageBlock title="Add supplier" tabStyle="Supplier__c">
+            <apex:pageBlockSection title="Enter supplier Dtails" collapsible="false" >
+                <apex:inputText value="{!supplierName}" label="Supplier name:" /><br/>
+                <apex:inputText value="{!supplierMno}" label="Supplier Mobile Number:" /><br/>
+                <apex:inputText value="{!supplierEmail}" label="Supplier Email ID:" /><br/>
+                <apex:inputTextarea value="{!supplierAddress}" label="Supplier Address:" /><br/>
+                <apex:commandButton action="{!ADD}" value="ADD" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Supplier details">
+                <apex:pageBlockTable value="{!supli}" var="s">
+                    <apex:column value="{!s.Name}"/>
+                    <apex:column value="{!s.Supplier_Name__c}"/>
+                    <apex:column value="{!s.Supplier_mobile_Number__c}"/>
+                    <apex:column value="{!s.Supplier_Email_ID__c}"/>
+                    <apex:column value="{!s.Supplier_Address__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page title="VF practice 1" lightningStylesheets="true" controller="VFPRAC1Controller">
+    <apex:image value="{!$Resource.kasmologo}" />
+    <apex:form >
+        <apex:pageBlock title="Vf practice 1">
+            <apex:pageBlockSection title="Arthamatic operations" collapsible="false" columns="1">
+                <apex:inputText label="Input 1" value="{!input1}" />
+                <apex:inputText label="Input 2" value="{!input2}" />
+                <apex:outputText label="Result" value="{!output}" />
+                <apex:commandButton value="Add" action="{!Addition}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="string operations" collapsible="false">
+                <h1>
+                    Section 2
+                </h1>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

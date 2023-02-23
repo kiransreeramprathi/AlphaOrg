@@ -1,0 +1,18 @@
+<apex:page title="Insert Records in provider org" lightningStylesheets="true" controller="AntraInsertRecordConsumerHandler">
+    <apex:form >
+        <apex:pageBlock title="Insert record">
+            <apex:pageBlockSection collapsible="false" title="Enter details">
+                <apex:inputText value="{!AccountName}" label="Account name" /><br/>
+                <apex:inputText value="{!AccountNumber}" label="Account Number" /><br/>
+                <apex:inputText value="{!Accountsite}" label="Account site" /><br/>
+                <apex:commandButton action="{!inrecord}" value="Insert" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection collapsible="false" title="Update Record">
+                <apex:inputText value="{!UpName}" label="Account name" /><br/>
+                <apex:inputText value="{!UpNumber}" label="Account Number" /><br/>
+                <apex:inputText value="{!Upsite}" label="Account site" /><br/>
+                <apex:commandButton action="{!Uprecord}" value="Update" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

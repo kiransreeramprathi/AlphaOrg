@@ -1,0 +1,40 @@
+<aura:component controller="AuraDynamicPicklist" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="LeadName" type="string"/>
+    <aura:attribute name="Status" type="List" default="[]"/>
+    
+    <aura:attribute name="LeadSources" type="List" default="[]"/>
+    <aura:attribute name="AccRecord" type="List"/>
+    
+    <aura:attribute name="selectedValue" type="string" />
+    <aura:attribute name="LeadSourceselectedValue" type="string" />
+    <aura:handler name="init" value="{!this}" action="{!c.DisplayDynamic}" />
+    <lightning:card title="Antra 4th exam " >
+        <lightning:input label="Enter Name" value="{!v.LeadName}" style="width:15rem" onchange="{!c.GetValue}"/>
+        <!--lightning:button label="Search" onclick="{!c.GetValue}"/-->
+        <lightning:combobox style="width:15rem" label="Lead Source" options="{!v.LeadSources}" onchange="{!c.getSelectedLeadValue}" value="{!v.LeadSourceselectedValue}" />
+        <lightning:combobox style="width:15rem" label="Status" options="{!v.Status}" onchange="{!c.getSelectedValue}" value="{!v.selectedValue}" />
+        <br/><br/>
+        <div >
+            <table width="40%" border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Lead Source</th>
+                    <th>Status</th>
+                </tr>
+                <aura:iteration items="{!v.AccRecord}" var="al">
+                    <tr>
+                        <td style="color:blue;font-size: 12px;font-family: Times">{!al.Name}</td>
+                        <td style="color:blue;font-size: 12px;font-family: Times">{!al.Company}</td>
+                        <td style="color:blue;font-size: 12px;font-family: Times">{!al.Phone}</td>
+                        <td style="color:blue;font-size: 12px;font-family: Times">{!al.Email}</td>
+                        <td style="color:blue;font-size: 12px;font-family: Times">{!al.LeadSource}</td>
+                        <td style="color:blue;font-size: 12px;font-family: Times">{!al.Status}</td>
+                    </tr>
+                </aura:iteration>
+            </table>
+        </div>
+    </lightning:card>
+</aura:component>

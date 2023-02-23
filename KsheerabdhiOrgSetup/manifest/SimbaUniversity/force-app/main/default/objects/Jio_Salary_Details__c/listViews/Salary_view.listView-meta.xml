@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salary_view</fullName>
+    <columns>NAME</columns>
+    <columns>Employee_Name__c</columns>
+    <columns>Basic_Salary__c</columns>
+    <columns>HRA__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Salary view</label>
+</ListView>

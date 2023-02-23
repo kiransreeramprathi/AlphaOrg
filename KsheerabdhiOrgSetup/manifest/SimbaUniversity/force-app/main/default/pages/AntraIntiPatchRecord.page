@@ -1,0 +1,17 @@
+<apex:page controller="AntraIntiPatchRecordHandler" lightningStylesheets="true" title="Patch Operation">
+    <apex:form >
+        <apex:pageBlock title="Patch records">
+            <apex:pageBlockSection collapsible="false" title="Account details">
+                <apex:inputtext value="{!AcName}" label="Name" /><br/>
+                <apex:commandButton action="{!getdata}" value="Get data" /><br/>
+                <apex:pageBlockTable value="{!accw}" var="s" style="border:1">
+                    <apex:column headerValue="Account Name" ><apex:inputText value="{!s.name}" /></apex:column>
+                    <apex:column headerValue="Account Number"><apex:inputText value="{!s.AccountNumber}" /></apex:column>
+                    <apex:column value="{!s.id}"  headerValue="Account ID"></apex:column>
+                    <apex:column headerValue="Account site"><apex:inputText value="{!s.Site}"/></apex:column><br/>
+                </apex:pageBlockTable><br/>
+                <apex:commandButton action="{!patchdata}" value="Update" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

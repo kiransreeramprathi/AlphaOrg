@@ -1,0 +1,85 @@
+<apex:page title="Antra_Assesment1" controller="asses1vfhandler">
+    <style>
+        body{background-color: #0080ff; }
+    </style>
+    
+    <apex:form title="Form1" style="margin:50px 500px;">
+        <table border='0'>
+            <tr>
+                <td>
+                   <apex:image url="data:image/png;base64,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"/> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><span style='color:white;Font-size:20px'>
+                        Secure Data Collection made simple.
+                    </span></center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table style='background-color:white;box-shadow:10px 10px' border='0'>
+                        <tr>
+                            <td>
+                            <span style='font-size:30px;margin:0px 30px'>LOGIN INTO YOUR ACCOUNT </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               <span style='font-size:20px;'>Username: </span> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <apex:inputText value="{!uname}" style="padding:10px 160px;margin:0px 30px" id="unam"/>
+                            </td>
+                        </tr>
+                        <tr height='20px'>
+                        </tr>
+                        <tr>
+                            <td>
+                               <span style='font-size:20px;'>Password: </span> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <apex:inputSecret value="{!pass}" style="padding:10px 160px;margin:0px 30px" id="pass"/>
+                            </td>
+                        </tr>
+                        <tr height='20px'>
+                        </tr>
+                        <tr>
+                        <td>
+                            <apex:commandButton onclick="validate()" action="{!submit}" style="background-color:blue; text-align:center; padding:20px 140px;margin:0px 100px" value="Login"/>
+                        </td>
+                        </tr>
+                        <tr height='20px'>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href='https://app.formassembly.com/users/forgot_password'><span style='font-size:15px;color:blue'>Forgot username or password</span></a>
+                                <a href='https://www.formassembly.com/sign-up/?plan=PREMIER'><span style='font-size:15px;color:blue;margin:0px 110px'>Start your free trail</span></a>
+                            </td>
+                        </tr>
+                        <tr height='20px'>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <script>
+        var a=document.getElementById("unam").value;
+        var b=document.getElementById("pass").value;
+        function validate(){
+            if(a == null || a == ""){
+                alert('Plese enter username');
+                return false;
+        } if(b == null || b == ""){
+                alert('Plese enter password');
+            return false;
+        }
+            }
+        </script>
+    </apex:form>
+</apex:page>

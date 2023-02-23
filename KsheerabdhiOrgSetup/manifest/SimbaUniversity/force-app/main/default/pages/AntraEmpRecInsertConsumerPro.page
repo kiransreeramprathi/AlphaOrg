@@ -1,0 +1,23 @@
+<apex:page controller="AntraEmpRecInsertConsumerPro" title="Antra Emp Record Insert Consumer Program" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Enter Details:" collapsible="true">
+                <apex:inputText value="{!EmpFName}" label="Employee First Name:" />
+                <apex:inputText value="{!EmpLName}" label="Employee last Name:" />
+                <apex:inputText value="{!EmpMail}" label="Employee Mail ID:" /><br/>
+                <!--apex:commandButton action="{!AddEmp}" value="Submit Details" /-->
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Delete operation">
+                <apex:inputText value="{!empid}" label="Enter Employee ID" /><br/>
+                <!--apex:commandButton action="{!delemp}" value="Delete Employee" /--><br/>
+               <center><apex:pageMessages ></apex:pageMessages></center> 
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Update Records">
+                <apex:inputText value="{!upEmpId}" label="Employee ID" />
+                <apex:inputText value="{!upEmpName}" label="Employee Name" />
+                <apex:inputText value="{!upEmpMobile}" label="Employee Mobile Number" />
+                <apex:commandButton action="{!EmpUpdate}" value="Update Details" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

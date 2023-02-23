@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-Forecasting3</tabs>
+    <tabs>standard-Contract</tabs>
+    <tabs>standard-Order</tabs>
+    <tabs>standard-Invoice</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>standard-Solution</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>Smart_Library_Customer__c</tabs>
+    <tabs>Book__c</tabs>
+    <tabs>Media__c</tabs>
+    <tabs>Customer_Media__c</tabs>
+    <tabs>Book_Penalty__c</tabs>
+    <tabs>Supplier__c</tabs>
+    <tabs>Antra_Employees__c</tabs>
+    <tabs>Jio_Employee_Details__c</tabs>
+    <tabs>Jio_Salary_Details__c</tabs>
+    <tabs>Jio_Employee_Leaves__c</tabs>
+    <tabs>Employee_CTC_calc__c</tabs>
+    <tabs>Add_account</tabs>
+</CustomApplication>

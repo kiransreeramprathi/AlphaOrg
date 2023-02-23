@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_issue_should_be_today</fullName>
+    <active>true</active>
+    <errorConditionFormula>Date_of_issue__c &lt;&gt;  TODAY()</errorConditionFormula>
+    <errorDisplayField>Date_of_issue__c</errorDisplayField>
+    <errorMessage>Date of issue should be today</errorMessage>
+</ValidationRule>

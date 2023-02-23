@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Dynamic Binding" icon-name="action:approval">
+        <div class="slds-p-around_large">
+            {disp}
+        </div>
+        <div>
+            <lightning-input label="Dynamic Value" value={disp} onchange={handleChange}></lightning-input>
+        </div>
+    </lightning-card>
+</template>

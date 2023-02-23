@@ -1,0 +1,19 @@
+<apex:page standardController="Account" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Insert Accounts">
+            <apex:pageBlockSection columns="2" >
+                <apex:inputField value="{!account.Name}" />
+                <apex:inputField value="{!account.Industry}" />
+                <apex:inputField value="{!account.ParentId}" /><br/>
+                <apex:commandButton action="{!save}" value="Insert" />
+                <apex:commandButton action="{!cancel}" value="Abort" />
+                <!--table border="1">
+                    <tr>
+                        <td>abcd</td>
+                        <td>fg</td>
+                    </tr>
+                </table-->
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

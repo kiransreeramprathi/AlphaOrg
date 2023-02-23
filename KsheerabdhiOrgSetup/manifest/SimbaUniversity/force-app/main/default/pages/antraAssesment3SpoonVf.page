@@ -1,0 +1,21 @@
+<apex:page lightningStylesheets="true" title="spoonacular Assesement 3" controller="antraAssesment3SpoonHandler">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection collapsible="false" title="Get Product Detils">
+                <apex:inputText value="{!enterid}" label="Enter Id:" /><br/>
+                <apex:commandButton action="{!fetchdata}" value="Fetch" /><br/>
+                <apex:pageBlockTable value="{!diswrap}" var="d">
+                    <apex:column headerValue="id" value="{!d.id}" />
+                    <apex:column headerValue="Title" value="{!d.title}" />
+                    <apex:column headerValue="Price" value="{!d.price}" />
+                </apex:pageBlockTable>
+                <apex:pageBlockTable value="{!diswrap.nutrition.nutrients}" var="dn" title="nutrients">
+                    <apex:column value="{!dn.name}" headerValue="Name" />
+                    <apex:column value="{!dn.amount}" headerValue="amount" />
+                    <apex:column value="{!dn.unit}" headerValue="unit" />
+                    <apex:column value="{!dn.percentOfDailyNeeds}" headerValue="percentOfDailyNeeds" />
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

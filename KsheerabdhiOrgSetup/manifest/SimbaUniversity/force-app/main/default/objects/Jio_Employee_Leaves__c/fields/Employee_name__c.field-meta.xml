@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_name__c</fullName>
+    <externalId>false</externalId>
+    <label>Employee name</label>
+    <referenceTo>Jio_Employee_Details__c</referenceTo>
+    <relationshipLabel>Jio Employee Leaves</relationshipLabel>
+    <relationshipName>Jio_Employee_Leaves</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

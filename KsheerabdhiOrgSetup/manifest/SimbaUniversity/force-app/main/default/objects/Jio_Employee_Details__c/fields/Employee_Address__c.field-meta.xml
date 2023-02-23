@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_Address__c</fullName>
+    <externalId>false</externalId>
+    <formula>Address__c +&apos; &apos;+ TEXT( Cities__c ) +&apos; &apos;+TEXT(  State__c  )+&apos; &apos;+TEXT(   Postal_Code__c   )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Employee Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

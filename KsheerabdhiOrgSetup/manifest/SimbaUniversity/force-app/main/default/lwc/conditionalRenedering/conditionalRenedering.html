@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Conditional Rendering" icon-name="standard:event">
+        <div class="slds-p-around_large">
+            <lightning-input type="checkbox" label="Click me" onchange={handleChange}></lightning-input>
+            <template if:true={showMsg}>
+                I am visible
+            </template>
+            <template if:false={showMsg}>
+                <h1>False templete</h1>
+            </template>
+        </div>
+    </lightning-card>
+</template>

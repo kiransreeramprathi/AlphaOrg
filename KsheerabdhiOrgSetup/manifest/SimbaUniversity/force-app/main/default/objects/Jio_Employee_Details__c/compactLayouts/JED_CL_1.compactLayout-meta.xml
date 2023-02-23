@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JED_CL_1</fullName>
+    <fields>Name</fields>
+    <fields>Employee_Email_ID__c</fields>
+    <fields>Employee_Id__c</fields>
+    <fields>Designation__c</fields>
+    <label>JED CL 1</label>
+</CompactLayout>

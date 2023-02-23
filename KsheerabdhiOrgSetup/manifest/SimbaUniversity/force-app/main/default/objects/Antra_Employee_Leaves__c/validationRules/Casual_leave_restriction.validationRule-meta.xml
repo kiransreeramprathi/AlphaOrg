@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Casual_leave_restriction</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( Leave_Type__c , &apos;casual leave&apos;) &amp;&amp;  leave_duration__c &gt;3</errorConditionFormula>
+    <errorMessage>unable to process casual leave because the leave applied is more than 3 days</errorMessage>
+</ValidationRule>
