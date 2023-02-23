@@ -1,0 +1,46 @@
+<aura:component controller="EmpComponentcls" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="ename" type="string"/>
+    <aura:attribute name="mins" type="Decimal"/>
+    <aura:attribute name="maxs" type="Decimal"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="empdata" type="list"/>
+    <aura:attribute name="nedata" type="list"/>
+    <aura:attribute name="GenderOptions" type="List" default="[
+                                                              {'label': 'Male', 'value': 'Male'},
+                                                              {'label': 'Female', 'value': 'Female'}
+                                                              ]"/>
+    <aura:attribute name="genvalue" type="String"/>
+    <lightning:card title="Employee Details" iconName="action:new_person_account">
+        <div class="slds-var-p-around_small">
+            <lightning:input label="EmpName" style="width:15rem" value="{!v.ename}" onchange="{!c.changeEname}"/><br/>
+            <lightning:input label="MinSalary" style="width:15rem" value="{!v.mins}" />
+            <lightning:input label="MaxSalary" style="width:15rem" value="{!v.maxs}" onchange="{!c.changeMaxsal}"/><br/>
+            <lightning:radioGroup name="genGroup"
+                                  label="Gender"
+                                  options="{! v.GenderOptions }"
+                                  value="{! v.genvalue }"
+                                  type="radio"
+                                  onchange="{!c.changeGender}"/><br/>
+        </div>
+        <div class="slds-var-p-around_small">
+            <table width="40%" border="1">
+                <tr>
+                    <th>Ename</th>
+                    <th>EmployeeID</th>
+                    <th>MonthlSalary</th>
+                    <th>Gender</th>
+                    <th>EmailID</th>
+                </tr>
+                <aura:iteration items="{!v.nedata}" var="ar">
+                    <tr>
+                       <td>{!ar.Name}</td>
+                        <td>{!ar.Employee_ID__c}</td>
+                       <td>{!ar.Monthly_salary__c}</td>
+                        <td>{!ar.Gender__c}</td>
+                        <td>{!ar.Email_ID__c}</td>
+                    </tr>
+                </aura:iteration>
+            </table>
+        </div>
+    </lightning:card>
+</aura:component>

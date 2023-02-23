@@ -1,0 +1,15 @@
+<template>
+<lightning-card title="For each loop">
+<div class="slds-var-p-around_small">
+<template iterator:it={cmpNames}>
+<h1 key={it.value}>{it.value}</h1>
+</template>
+</div>
+<hr size="3">
+<template for:each={cmpData} for:item="cd">
+<div key={cd}>
+<h1>{cd.name}&nbsp;&nbsp;&nbsp;{cd.employee}&nbsp;&nbsp;&nbsp;{cd.address}</h1>
+</div>
+</template>
+</lightning-card>
+</template>

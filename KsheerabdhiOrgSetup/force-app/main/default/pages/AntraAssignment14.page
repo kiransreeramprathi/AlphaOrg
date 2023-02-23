@@ -1,0 +1,105 @@
+<apex:page >
+    <style type="text/css">
+        nav{
+        flex: 1;
+        text-align: left;
+        color: black;
+        padding: 8px 20px;
+        font-size:15px;
+        }
+        
+        nav ul{
+        display: inline;
+        list-style: none;
+        }
+        nav ul li{
+        display: inline;
+        margin-right: 25px;
+        }
+        nav ul li:hover{
+        color:red;
+        pointer:cursor;
+        }
+    </style>
+    <apex:form style="background-image: url(https://multi-specialty.com/wp-content/uploads/2020/05/mainslider.jpg); background-size:110% 170%; padding:150px 80px" >
+        <table style="background-color:rgba(255, 252, 252, 0.7) !important; margin-top:-140px" width="100%" border='1'>
+            <tr>
+                <td>
+                    <apex:image url="https://www.multi-specialty.com/wp-content/uploads/2019/07/logo.png" width="100px"/>
+                </td>
+                <td>
+                    <nav >
+                        <ul>
+                            <li><span>Patient Forms</span></li>
+                            <li><span>About Us</span></li>
+                            <li><span>Providers</span></li>
+                            <li><span>Services</span></li>
+                            <li><span>Education</span></li>
+                            <li><span>Contact Us</span></li>
+                        </ul>
+                    </nav>
+                </td>
+                <td>
+                    <apex:image url="https://www.multi-specialty.com/wp-content/themes/multi-specialty/assets/images/user.png" width="15px" style="margin-left:50px"/>
+                    <span style="font-size:15px;"><b>Login</b></span> &nbsp;&nbsp;&nbsp;
+                    <apex:image url="https://www.multi-specialty.com/wp-content/themes/multi-specialty/assets/images/signup.png" width="15px"/>
+                    <span style="font-size:15px"><b>Sign Up</b></span><br/>&nbsp;&nbsp;
+                    <output></output>
+                    <b><input type="search" value="Attorney Portal" style="padding: 12px 25px;font-size:15px"/></b>   
+                </td>
+            </tr>
+        </table>
+        <table border="1" style="margin-left:120px">
+            <tr>
+                <td>
+                    <b> <span style="color: #193c58; font-family: Sans-serif;font-size: 72px">Compassionate <br/>Care</span></b>
+                </td></tr>
+            <tr>
+                <td><span style="color: #193C58;font-family:Sans-serif;font-size: 48px;">for all Medical Needs</span>
+                </td></tr>
+            <tr>
+                <td><span style="color: #193C58;font-size: 16px;">Multi-Specialty HealthCare has over 30 patient care centers throughout<br/> the Baltimore-Washington Metropolitan area and the Delmarva<br/> Peninsula.</span></td></tr>
+            <tr><td>
+                <input type="text" placeholder="Enter a zip Code to search location" style="background:#fff;border: none;border-radius: 5px;padding: 15px 140px;color: #444141;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:image url="https://www.multi-specialty.com/wp-content/themes/multi-specialty/assets/images/magnifing.png" width="38px" style="background-color:#193c58;border-radius: 5px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span style="color: #193C58;font-size: 16px;">Click the button below to make an appointment today</span></td></tr>
+            <tr><td><input type="button" value="Request an Appointment" style="background-color: #114771;border-radius: 10px 10px 10px 10px;padding: 15px 20px 15px 20px;border:none;color:white"/></td></tr>
+        </table>
+        <table border="1" style="margin-left:800px; margin-top:-360px">
+            <tr><td style="background-color:rgba(255, 252, 252, 0.7) !important;padding:10px 15px; border-radius: 5px;"><apex:image url="https://www.multi-specialty.com/wp-content/uploads/2019/07/request.png" width="35px" /><br/>
+                <span style="margin: 1px 0px 0px 0px;color: #2c4254;font-size: 14px;">REQUEST<br/> APPOINTMENT</span>
+                </td>
+                <td style="background-color:rgba(255, 252, 252, 0.7) !important; padding:10px 15px; border-radius: 5px;"><apex:image url="https://www.multi-specialty.com/wp-content/uploads/2019/07/appoitmentforms.png" width="35px" /><br/>
+                    <span style="margin: 1px 0px 0px 0px;color: #2c4254;font-size: 14px;">PATIENT<br/> FORMS</span>
+                </td>
+                <td style="background-color:rgba(255, 252, 252, 0.7) !important; padding:10px 15px; border-radius: 5px;"><apex:image url="https://www.multi-specialty.com/wp-content/uploads/2019/07/attorny-portal.png" width="35px" /><br/>
+                    <span style="margin: 1px 0px 0px 0px;color: #2c4254;font-size: 14px;">ATTORNEY <br/> PORTAL</span>
+                </td>
+            </tr>
+            <tr><td style="background-color:rgba(255, 252, 252, 0.7) !important;padding:10px 15px; border-radius: 5px;"><apex:image url="https://www.multi-specialty.com/wp-content/uploads/2019/07/providers.png" width="35px" /><br/>
+                <span style="margin: 1px 0px 0px 0px;color: #2c4254;font-size: 14px;">PROVIDERS</span>
+                </td>
+                <td style="background-color:rgba(255, 252, 252, 0.7) !important; padding:10px 15px; border-radius: 5px;"><apex:image url="https://www.multi-specialty.com/wp-content/uploads/2019/07/careers.png" width="35px" /><br/>
+                    <span style="margin: 1px 0px 0px 0px;color: #2c4254;font-size: 14px;">CAREERS</span>
+                </td>
+                <td style="background-color:rgba(255, 252, 252, 0.7) !important; padding:10px 15px; border-radius: 5px;"><apex:image url="https://www.multi-specialty.com/wp-content/uploads/2019/07/videos.png" width="35px" /><br/>
+                    <span style="margin: 1px 0px 0px 0px;color: #2c4254;font-size: 14px;">VIDEOS</span>
+                </td>
+            </tr>
+            <tr><td style="background-color:rgba(255, 252, 252, 0.7) !important;padding:10px 15px; border-radius: 5px;"><apex:image url="https://www.multi-specialty.com/wp-content/uploads/elementor/thumbs/pin-icon-u-p4mm51pkjfhj9cbaenqjnrea4va8yxiyk0tb7t8u2a.png" width="35px" /><br/>
+                <span style="margin: 1px 0px 0px 0px;color: #2c4254;font-size: 14px;">LOCATIONS</span>
+                </td>
+                <td style="background-color:rgba(255, 252, 252, 0.7) !important; padding:10px 15px; border-radius: 5px;"><apex:image url="https://www.multi-specialty.com/wp-content/uploads/2019/07/blogs.png" width="35px" /><br/>
+                    <span style="margin: 1px 0px 0px 0px;color: #2c4254;font-size: 14px;">RESOURCES</span>
+                </td>
+                <td style="background-color:rgba(255, 252, 252, 0.7) !important; padding:10px 15px; border-radius: 5px;"><apex:image url="https://www.multi-specialty.com/wp-content/uploads/2019/07/faq.png" width="35px" /><br/>
+                    <span style="margin: 1px 0px 0px 0px;color: #2c4254;font-size: 14px;">FAQS</span>
+                </td>
+            </tr>
+        </table>
+    </apex:form>
+</apex:page>

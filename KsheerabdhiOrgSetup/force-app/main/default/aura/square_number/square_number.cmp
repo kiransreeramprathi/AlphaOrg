@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" name="output_msg" type="integer"/>
+    <aura:attribute access="public" name="ip1" type="integer"/>
+    <aura:attribute access="public" name="ip2" type="integer"/>
+    <lightning:card>
+        <div>
+            <center><h1>Returning Two numbers</h1></center>
+            <lightning:input label="input1" value="{!v.ip1}" style="width:30%" /><br/>
+            <lightning:input label="input2" value="{!v.ip2}" style="width:30%"/><br/>
+            <lightning:button aura:id="sq1" label="Add square" variant="Brand" onclick="{!c.square}"/>
+            <lightning:button aura:id="sq2" label="substract square" variant="success" onclick="{!c.square}"/>
+        </div>
+        <h1>square of two numbers: {!v.output_msg}</h1>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_account_number_length</fullName>
+    <active>true</active>
+    <errorConditionFormula>LEN(Bank_account_Number__c  ) &lt;9</errorConditionFormula>
+    <errorDisplayField>Bank_account_Number__c</errorDisplayField>
+    <errorMessage>account number contains 9-12 digit numbers</errorMessage>
+</ValidationRule>

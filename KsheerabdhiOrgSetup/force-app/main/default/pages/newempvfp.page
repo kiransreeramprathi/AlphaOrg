@@ -1,0 +1,22 @@
+<apex:page controller="newemployeevfpage" lightningStylesheets="true"  docType="html-5.0">
+    <apex:form id="value" >
+        <apex:image url="https://lh3.googleusercontent.com/-ZhSpViMye1Fo4-S8KIs_zwJIT3nnHQpIB3QfTfU41n9OnfHntxTnxU5sEAo4gcsn-568eupMqIla02lbuvH99gkkeyozHI9t7j8z78R5wrRUFKQbk8oOB-HhuVSbDOWKOXlwf4MqZJpHMD83V0qTM1to4CNpwYYalhhwd8p55pQxsYUUbhdz2UXNinJ7f_aDEMSdCUu6F8rVlUUQteOKIjtj9mRLHV7LAcICnwcyplJMZkJLPtYrPVjz5iwMjtlHucrXs6kfeSL4U3WCLpTcC3xQD9ELThmxDbiYtDqTlOEHBPF4A9-inJ2s-IUGJMrirXmR8EJRAxep89etQdCf035VzqDAZqkV3L03onWfGuIfJKRltkd74b7LSgDG5Q_8-BEqlp7Net_sHl9lnEoeK2k25NfGu-1oT-9pHLSIxFVfrrw4LqursJ-GRJEizbvGFcShtWo6JZe5L0vHToPBR0mMdZmmUYvbqCy53iPVIA91xhhpOstl97N3ydJ_fH8HKDWKHK-r7ql0SgGxZ2FrakfXJQ04hE7U0mkAucF4QwbUb19tkFnLBQbZAQ1Gqft0Jlk4NbPiKMr38pQX6Cbi1n4kNdDMSVm4nbX1ssQjaa7wwpx_zgRZKBuLvS_1MJkvbcHGiWV0fJECm3RXxpLlqv8DJwtSntV1QKRHzLvKz294w3OrFqMMXH2XGSRYVBmA5os5wQ_ctqIRwFNpZRdTzzOhw=w800-h326-no?authuser=0" width="140px"/>
+        <body style="background-color:#8c9966;"/>
+        <apex:pageBlock title="DELTA SOLUTIONS" >
+            <apex:pageBlockSection title="Employee details"  collapsible="false" columns="1" >
+                <!--pick list button--> 
+                <apex:selectList label="Salution" size="1" value="{!newSalution}" style="background-color:#d4d4c4" >
+                    <apex:selectOptions value="{!Salution}">
+                    </apex:selectOptions> 
+                </apex:selectList>
+                <apex:inputtext value="{!empname}" label="Employee first Name:" html-placeholder="Enter first name" required="true" />
+                <apex:inputtext value="{!emplastname}" label="Employee last Name:" html-placeholder="Enter sur name" required="true" />
+                <!--Date Picker-->
+                <apex:input type="date" value="{!newDate_of_Birth}" label="Date of Birth" style="background-color:#d4d4c4" required="true" />
+                <br/>
+                    <apex:commandButton action="{!next}" value="NEXT" style="background-color:#d4d4c4"  />          
+                <marquee behavior="scroll" direction="left" scrollamount='5' >-:-:-:-:-:-:-:-:-click Next After filling application-:-:-:-:-:-:-:-:-</marquee>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

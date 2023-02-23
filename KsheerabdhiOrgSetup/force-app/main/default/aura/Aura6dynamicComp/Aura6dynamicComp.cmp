@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <lightning:card title="Dynamic Component">
+        <div>
+            <lightning:button label='CreateButton' onclick="{!c.crtButtonDynamically}"/>
+            <lightning:button label='Destruct' onclick="{!c.removeButtonDynamically}"/>
+            <br/><br/>
+            <div style='height:200px;width:350px;border:2px rigid yellow' aura:id='newtag'>
+                <span>Dynamic Component</span><br/>
+                {!v.body}
+            </div>
+        </div>
+    </lightning:card>
+</aura:component>

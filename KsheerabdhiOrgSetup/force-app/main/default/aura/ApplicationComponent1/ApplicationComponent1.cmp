@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="fn" type="Integer"/>
+    <aura:attribute name="sn" type="Integer"/>
+    <aura:registerEvent name="appEvent" type="c:ApplicationComponentEvent"/>
+    <lightning:card title="sum of Numbers">
+        <div class="slds-var-p-around_small">
+            <lightning:input label="Enter first number" value="{!v.fn}" type="number" style="width:15rem"/><br/>
+            <lightning:input label="Enter second number" value="{!v.sn}" type="number" style="width:15rem"/><br/>
+            <lightning:button label="ADD" onclick="{!c.addition}"/>
+        </div>
+    </lightning:card>
+</aura:component>

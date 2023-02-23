@@ -1,0 +1,11 @@
+<apex:page controller="AntraWeatherApiC" lightningStylesheets="true" title="Antra Weather Task">
+    <apex:form >
+        <apex:pageBlock title="weather">
+            <apex:pageBlockSection collapsible="false" title="Enter city Name">
+                <apex:inputText value="{!cityname}" /><br/>
+        <apex:commandButton action="{!citytemperature}" value="City Temperature" /><br/>
+                <apex:outputText value="{!contemp}" label="Temprature:" style="font-size: 40px;font-style: oblique;font-weight: bold;"></apex:outputText>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

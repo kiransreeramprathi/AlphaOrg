@@ -1,0 +1,16 @@
+<apex:page controller="PizaaCreatorsController">    
+    <apex:form >
+        <apex:selectCheckboxes value="{!pizzaVeggies}"><h3>Veggies</h3>
+            <apex:selectOption itemLabel="Spinach" itemValue="Spinach" ></apex:selectOption>
+            <apex:selectOption itemLabel="Jalapeneos" itemValue="Jalapeneos" ></apex:selectOption>
+            <apex:selectOption itemLabel="Banana Peppers" itemValue="Banana Peppers" ></apex:selectOption>
+            <apex:selectOption itemLabel="Roasted Red Peppers" itemValue="Roasted Red Peppers" ></apex:selectOption>
+            <apex:selectOption itemLabel="Tomatoes" itemValue="Tomatoes" ></apex:selectOption>
+            <apex:selectOption itemLabel="Onions" itemValue="Onions" ></apex:selectOption>
+            <apex:selectOption itemLabel="Pineapple" itemValue="Pineapple" ></apex:selectOption>
+            <apex:selectOption itemLabel="Corn" itemValue="Corn" ></apex:selectOption>
+            <apex:selectOption itemLabel="Black Olives" itemValue="Black Olives" ></apex:selectOption>
+        </apex:selectCheckboxes>           
+        <apex:commandButton action="{!displayVeggis}" value="Create Order"/>          
+    </apex:form>
+</apex:page>

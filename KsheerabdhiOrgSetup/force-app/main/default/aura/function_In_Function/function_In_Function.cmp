@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <lightning:card>
+        <h1>F3 </h1><br/>
+        <lightning:button label="click me" onclick="{!c.clickme}" class="color:white;background-color:#001133"/>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,39 @@
+<aura:component controller="DynamicPickListClass" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!-- display static options
+    <aura:attribute name="options" type="List" default="[
+                                                        {'label': 'New', 'value': 'new'},
+                                                        {'label': 'In Progress', 'value': 'inProgress'},
+                                                        {'label': 'Finished', 'value': 'finished'},]"/>
+    <aura:attribute name="val" type="string"/>
+    <lightning:card title="DynamicPickList" iconName="action:flow">
+        <lightning:combobox label="Status"  options="{! v.options }" onchange="{!c.changevalue}" value="{!v.val}" />
+    </lightning:card>-->
+    <aura:attribute name="accNum" type="list" default="[]" />
+    <aura:attribute name="accRec" type="list" />
+    <aura:attribute name="aNum" type="string" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card title="Dynamic PickList" iconName="action:flow">
+        <lightning:combobox label="Status"  options="{! v.accNum }" onchange="{!c.changeAccNum}" value="{!v.aNum}" />
+        <br/><br/>
+        <div class="slds-var-p-around_small">
+            <table width="40%" border="1">
+                <tr>
+                    <th>AccountNumber</th>
+                    <th>AccountName</th>
+                    <th>Phone</th>
+                    <th>Industry</th>
+                    <th>Website</th>
+                </tr>
+                <aura:iteration items="{!v.accRec}" var="ar">
+                    <tr>
+                       <td>{!ar.AccountNumber}</td>
+                        <td>{!ar.Name}</td>
+                       <td>{!ar.Phone}</td>
+                        <td>{!ar.Industry}</td>
+                        <td>{!ar.Website}</td>
+                    </tr>
+                </aura:iteration>
+            </table>
+        </div>
+    </lightning:card>
+</aura:component>

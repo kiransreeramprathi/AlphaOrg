@@ -1,0 +1,12 @@
+<apex:page standardcontroller="Case" lightningStylesheets="true" >
+    <apex:form >
+        <apex:pageBlock title="Case visual force page" >
+            <apex:pageBlockSection collapsible="true" title="case data" columns="2" showHeader="true">
+              <apex:inputField value="{!case.Origin}"/>
+                <apex:inputField value="{!case.Status}"/>
+                <apex:inputField value="{!case.AccountId}"/>
+                <apex:commandButton action="{!save}" value="save"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

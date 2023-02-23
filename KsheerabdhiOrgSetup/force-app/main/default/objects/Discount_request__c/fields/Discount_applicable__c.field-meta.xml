@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discount_applicable__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  amount_purchased__c  &lt;= 30000, 5 / 100, IF(  amount_purchased__c  &lt;= 60000, 10/100, IF(  amount_purchased__c  &gt; 60000, 15/100,15/100) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Discount applicable</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

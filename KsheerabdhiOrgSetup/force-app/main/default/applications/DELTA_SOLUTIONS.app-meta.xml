@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#020202</headerColor>
+        <logo>EG2rKSjVAAELpmT</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>DELTA SOLUTIONS</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>Employee_Details__c</tabs>
+    <tabs>Salary_Record__c</tabs>
+    <tabs>Leaves__c</tabs>
+    <tabs>Pay_slip__c</tabs>
+    <tabs>Antra_Department__c</tabs>
+    <tabs>Antra_Employee__c</tabs>
+    <tabs>Antra_Employee_Leaves__c</tabs>
+    <tabs>Question__c</tabs>
+    <tabs>Contact_Relationship__c</tabs>
+    <tabs>Spoonacular</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>DELTA_SOLUTIONS_UtilityBar</utilityBar>
+</CustomApplication>

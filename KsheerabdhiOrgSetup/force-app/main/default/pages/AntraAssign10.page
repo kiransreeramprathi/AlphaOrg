@@ -1,0 +1,186 @@
+<apex:page lightningStylesheets="true">
+    <apex:form id="form1" >
+        <style>
+            .dropdown{box-shadow:1px 1px 1px;border-radius:9px;bgcolor:#ffe6ee}
+        </style>
+        <table border='1' width='100%'>
+            <tr bgcolor="#ffe6ee" style="box-shadow:2px 2px;border-radius:9px">
+                <td width='60px'>
+                    <apex:image url="https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png" width="50px" height="50px" style="margin:10px 50px"/>
+                </td>
+                <td width='60px'>
+                    <h3>
+                        MEN
+                    </h3>
+                </td>
+                <td width='60px'>
+                    <h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp; Women
+                    </h3>
+                </td>
+                <td width='60px'>
+                    <h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp;KIDS
+                    </h3>
+                </td>
+                <td width='160px'>
+                    <h3>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Home and living
+                    </h3>
+                </td>
+                <td width='60px'>
+                    <h3>
+                        &nbsp;&nbsp;Beauty
+                    </h3>
+                </td>
+                <td width='60px'>
+                    <h3>
+                        &nbsp;STUDIO
+                    </h3>
+                </td>
+                <td>
+                    <apex:inputText title="search" html-placeholder="Search for product" style="padding:15px 90px;margin:0px 50px;border-radius: 30px;"/>
+                </td>
+                <td>
+                    <apex:image url="https://www.weact.org/wp-content/uploads/2016/10/Blank-profile.png" style="height:30px;width:30px;"/>
+                    <br/>
+                    <h3>
+                        &nbsp;Profile
+                    </h3>
+                </td>
+                <td>
+                    <apex:image url="https://cdn.pixabay.com/photo/2014/04/03/00/30/heart-308506_1280.png" style="height:30px;width:30px;"/>
+                    <br/>
+                    <h3>
+                        &nbsp;Wishlist
+                    </h3>
+                </td>
+                <td>
+                    <apex:image url="https://previews.123rf.com/images/piterk/piterk1704/piterk170400046/75435581-shopping-bag-symbol-simple-line-icon-on-background-.jpg" style="height:30px;width:30px;"/>
+                    <br/>
+                    <h3>
+                        &nbsp;Bag
+                    </h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="12">
+                    <h6>
+                        Home/Home furnising/<span style="size:12px">House furnishing</span>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><h4>
+                    Filters&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:selectList multiselect="false" size="1" styleClass="dropdown">
+                        <apex:selectOption itemLabel="Bundles" itemValue=""/>
+                    </apex:selectList>
+                    </h4></td>
+                <td width="150px">&nbsp;&nbsp;
+                    <apex:selectList multiselect="false" size="1" styleClass="dropdown">
+                        <apex:selectOption itemLabel="Country of origin" itemValue=""/>
+                        <apex:selectOption itemLabel="Pakistan" itemValue="Pak"/>
+                    </apex:selectList>
+                </td>
+                <td colspan="5" width="90px">&nbsp;&nbsp;
+                    <apex:selectList multiselect="false" size="1" styleClass="dropdown">
+                        <apex:selectOption itemLabel="Size" itemValue=""/>
+                        <apex:selectOption itemLabel="XL" itemValue="xl"/>
+                    </apex:selectList>
+                </td>
+                <td colspan="5" width="50px">&nbsp;&nbsp;
+                    <apex:selectList multiselect="false" size="1" styleClass="dropdown">
+                        <apex:selectOption itemLabel="Sort by recomended" itemValue=""/>
+                        <apex:selectOption itemLabel="Lowest Price" itemValue="xl"/>
+                    </apex:selectList>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='2'>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="MEN" itemValue="MEN" />
+                    </apex:selectCheckboxes>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="WOMEN" itemValue="WOMEN"/>
+                    </apex:selectCheckboxes>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="boys" itemValue="Boys"/>
+                    </apex:selectCheckboxes>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="girls" itemValue="Girls"/>
+                    </apex:selectCheckboxes>
+                </td>
+                <td rowspan="2" colspan="9">
+                    <apex:image url="https://3.imimg.com/data3/WM/VX/MY-19154162/bedroom-curtain-500x500.jpg" style="height:350px;width:250px;
+                                                                                                                     margin: 0px 20px"/><br/>
+                    
+                    <apex:image url="https://3.imimg.com/data3/WM/VX/MY-19154162/bedroom-curtain-500x500.jpg" style="height:350px;width:250px;
+                                                                                                                     margin: -350px 320px"/><br/>
+                    <apex:image url="https://3.imimg.com/data3/WM/VX/MY-19154162/bedroom-curtain-500x500.jpg" style="height:350px;width:250px;
+                                                                                                                     margin: -350px 620px"/><br/>
+                    <apex:image url="https://3.imimg.com/data3/WM/VX/MY-19154162/bedroom-curtain-500x500.jpg" style="height:350px;width:250px;
+                                                                                                                     margin: -350px 920px"/><br/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='2'>
+                    <span style="font-size:15px">
+                        &nbsp;&nbsp;&nbsp;CATEGORIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <apex:image url="https://cdn-icons-png.flaticon.com/512/61/61088.png" height="10px" width="10px"/>
+                    </span>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="BEDSHEETS" itemValue="BEDSHEETS" />
+                    </apex:selectCheckboxes>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="Curtains and Sheers" itemValue="Curtains and Sheers"/>
+                    </apex:selectCheckboxes>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="Cushion covers" itemValue="Cushion covers"/>
+                    </apex:selectCheckboxes>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="Wall Arts" itemValue="Wall Arts"/>
+                    </apex:selectCheckboxes>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="Blankent Quilts" itemValue="Blankent Quilts"/>
+                    </apex:selectCheckboxes>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="Clock" itemValue="Clock"/>
+                    </apex:selectCheckboxes>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="Organisers" itemValue="Organisers"/>
+                    </apex:selectCheckboxes>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="Cups and Mugs" itemValue="CAM"/>
+                    </apex:selectCheckboxes>
+                    <a>&nbsp;&nbsp;&nbsp;&nbsp;+100 more</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='12'>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                    Curtain<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Price: 999
+                    </span> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Curtain2</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Curtain3</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Curtain4</span>
+                    
+                </td>
+            </tr>
+        </table>
+    </apex:form>
+</apex:page>

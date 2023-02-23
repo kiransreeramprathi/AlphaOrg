@@ -1,0 +1,17 @@
+<apex:page lightningStylesheets="true" title="May 19_2" controller="antramay192hand">
+    <apex:form >
+        <apex:pageBlock title="May 19.2 parctice">
+            Account Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:selectRadio value="{!gender}">
+                <apex:selectOption itemLabel="Male" itemvalue="male"/>
+                <apex:selectOption itemLabel="Female" itemValue="Female"/>
+            </apex:selectRadio>
+            <apex:commandButton action="{!search}"  value="Boom"/>
+            <apex:pageBlockTable value="{!disp}" var="d">
+                <apex:column value="{!d.Name}"/>
+                <apex:column value="{!d.Phone_number__c}"/>
+                <apex:column value="{!d.Gender__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

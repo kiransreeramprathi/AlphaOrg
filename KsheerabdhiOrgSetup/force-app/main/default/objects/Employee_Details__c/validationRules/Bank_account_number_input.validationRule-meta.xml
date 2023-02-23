@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_account_number_input</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT (ISNUMBER( Bank_account_Number__c ) )</errorConditionFormula>
+    <errorDisplayField>Bank_account_Number__c</errorDisplayField>
+    <errorMessage>Bank account number will contain only numbers</errorMessage>
+</ValidationRule>

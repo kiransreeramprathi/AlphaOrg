@@ -1,0 +1,39 @@
+<apex:page title="Antra_tab_panel" lightningStylesheets="true" standardController="Account">
+    <style>
+        .tabstyle{font-size:15px;color:red;border-radius:6px}
+    </style>
+    <apex:form style="background-color:yellow">
+        <apex:image url="https://qph.cf2.quoracdn.net/main-qimg-c72bca0f7b7dcf7adb58ff32f54bf2d5-lq" style="height: 80px;width:80px;margin:0px 700px;background-color:yellow"/>
+    <apex:pageBlock >
+        <apex:pageBlockSection collapsible="true">
+            <apex:tabPanel >
+                <apex:tab label="Tab1" styleClass="tabstyle">
+                   <h5>
+                       Account name: 
+                    </h5> <apex:inputField value="{!Account.Name}" label="Account name" />
+                    <h5>
+                       Account industry: 
+                    </h5> <apex:inputField value="{!Account.Industry}" label="Account industry" />
+                </apex:tab>
+                <apex:tab label="Tab2">
+                    <h5>
+                       Account name: 
+                    </h5> <apex:inputField value="{!Account.Name}" label="Account name" />
+                    <h5>
+                       Account industry: 
+                    </h5> <apex:inputField value="{!Account.Industry}" label="Account industry" />
+                </apex:tab>
+                <apex:tab label="Tab3">
+                    <h5>
+                       Account name: 
+                    </h5> <apex:inputField value="{!Account.Name}" label="Account name" />
+                    <h5>
+                       Account industry: 
+                    </h5> <apex:inputField value="{!Account.Industry}" label="Account industry" /><br/>
+                    <apex:commandButton action="{!save}" value="Submit"/>
+                </apex:tab>
+            </apex:tabPanel>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

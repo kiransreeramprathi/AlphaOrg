@@ -1,0 +1,42 @@
+<apex:page lightningStylesheets="true" title="All DML Operation" controller="AntraAllOperationHandler">
+    <apex:form >
+        <body style='Background-color:#ffc299'>
+            <apex:pageBlock title="All DML Operation's">
+                <apex:pageBlockSection title="Insert Operation" collapsible="true">
+                    <apex:pageMessages /><br/>
+                    <apex:inputText value="{!EmpFirstName}" label="Employee First Name:"/>
+                    <br/>
+                    <apex:inputText value="{!EmpLastName}" label="Enter Employee Last Name:"/>
+                    <br/>
+                    <apex:inputText value="{!EmpEmail}" label="Enter Employee Email ID:"/>
+                    <br/>
+                    <apex:inputText value="{!EmpMobileNumber}" label="Enter Employee Mobile Number:"/>
+                    <br/>
+                    <apex:commandButton action="{!submit}" value="Insert" />
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Search Opeartion" collapsible="true">
+                    <apex:pageMessages /><br/>
+                    <apex:inputText value="{!EmpIdSearch}" label="Enter Employee Id:" /><br/>
+                    <apex:commandButton action="{!SearchId}" value="Search Employee" /><br/>
+                    <apex:pageBlockTable value="{!dispEmpDet}" title="Employee details" var="Dem" >
+                        <apex:column value="{!Dem.First_name__c}" />
+                        <apex:column value="{!Dem.Last_Name__c}" />
+                        <apex:column value="{!Dem.Employee_Mail_Id__c}" />
+                        <apex:column value="{!Dem.Employee_Mobile_number__c}" />
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Update Operation" collapsible="false">
+                    <apex:outputText value="{!UpErr}" /><br/>
+                    <apex:inputText value="{!UpEmpID}" label="Enter Employee ID:" /><br/>
+                    <apex:commandButton action="{!Upsearch}" value="Search" /><br/>
+                    <table style='margin:0px 0px'>
+                        <tr><td><apex:inputText value="{!UpEmname}" label="Employee name" /></td></tr>
+                        <tr><td><apex:inputText value="{!UpEmMobile}" label="Employee Mobile Number:" /></td></tr>
+                        <tr><td><apex:inputText value="{!UpEmMail}" label="Employee Mail ID:" /></td></tr>
+                    </table>
+                    <apex:commandButton action="{!UpUpdate}" value="Update" />
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </body>
+    </apex:form>
+</apex:page>

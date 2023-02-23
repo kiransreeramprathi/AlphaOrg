@@ -1,0 +1,15 @@
+<apex:page controller="spoonacularHandler" lightningStylesheets="true" title="Get Recipie Information">
+    <apex:form >
+        <apex:pageBlock title="Get Recipie Information">
+            <apex:pageBlockSection >
+                <!--<apex:inputText label="enter value:" /><br/-->
+                <apex:commandButton action="{!get}" value="Get Recipie" /><br/>
+               <apex:pageBlockTable value="{!sp}" var="s">
+                   <apex:column value="{!s.id}" headerValue="ID" />
+                   <apex:column value="{!s.name}" headerValue="Name"/>
+                   <apex:column headerValue="Image"><apex:image url="{!s.image}" alt="unable to load" /></apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,5 @@
+@import 'c/externalCssFile';
+.css{
+    width:80%;
+    background-color: #2196f3;
+}

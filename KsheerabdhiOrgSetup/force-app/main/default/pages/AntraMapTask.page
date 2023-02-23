@@ -1,0 +1,11 @@
+<apex:page lightningStylesheets="true" title="MAP TASK" controller="AntraMapController">
+    <apex:form >
+    <apex:pageBlock title="Map Task">
+        <apex:pageBlockSection title="Section 1" collapsible="false">
+            <apex:inputText value="{!ipvalue}" label="location" /><br/>
+            <apex:commandButton action="{!search}" value="Search" /><br/>
+            <apex:outputText value="{!opval}" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+        </apex:form>
+</apex:page>

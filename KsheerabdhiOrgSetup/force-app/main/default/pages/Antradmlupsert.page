@@ -1,0 +1,35 @@
+<apex:page controller="Antradmlupshand" title="Upsert operation Practice" lightningStylesheets="true" >
+    <apex:form >
+        <apex:pageBlock title="Records">
+            <apex:pageBlockSection title="Section1" collapsible="false">
+                <table border='1' >
+                    <tr>
+                        <td>
+                            <apex:inputtext value="{!ipname}" label="Account name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:commandButton action="{!search}" value="Search" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:inputText value="{!name}" label="Account name" />
+                        </td>
+                        </tr>
+                    <tr>
+                        <td>
+                            <apex:inputText value="{!Phones}" label="Account number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:commandButton action="{!method2}" value="Update/insert new contact" />
+                        </td>
+                    </tr>
+                </table>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

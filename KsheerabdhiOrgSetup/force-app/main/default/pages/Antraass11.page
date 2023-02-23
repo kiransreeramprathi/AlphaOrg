@@ -1,0 +1,106 @@
+<apex:page >
+    <style>
+        .txtdec{text-decoration:none}
+    </style>
+    <apex:form >
+        <table border='1' width='100%'>
+            <tr>
+                <td><apex:image url="https://www.bus.irctc.co.in/assets/img/tourism-logo.png"/></td>
+                <td><apex:image url="https://www.bus.irctc.co.in/assets/img/azadi-moh.jpg" style="margin:0px 200px"/></td>
+                <td><h6>
+                    Contact us:
+                    </h6>
+                    <apex:selectList multiselect="false" size="1">
+                        <apex:selectOption ></apex:selectOption>
+                        <apex:selectOption itemValue="1234567"></apex:selectOption>
+                        <apex:selectOption itemValue="kiransreeram8@live.com"></apex:selectOption>
+                    </apex:selectList>
+                </td>
+                <td><a styleclass='txtdec'><h3>
+                    Login
+                    </h3></a></td>
+                <td><apex:image url="https://www.bus.irctc.co.in/assets/img/irctc-logo.png"/></td>
+            </tr>
+        </table>
+        <table border='1' align='center' style='background-color:blue' width='100%'>
+            <tr>
+                <td colspan='9'>
+                    <apex:image url="https://cdn.dribbble.com/users/2101543/screenshots/4733590/busem_przez_swiat.gif" style="width:1600px;height:200px"/>
+                </td>
+            </tr>
+            <tr>
+                <td width='10px'><a><apex:image url="https://cdn.dribbble.com/users/754789/screenshots/2381650/gif-aviao.gif" style="height:50px;width:50px;"/></a>
+                    <br/><h3 style='color:White;'>
+                    Flights
+                    </h3>
+                </td>
+                <td width='10px'>
+                    <apex:image url="https://cdn.dribbble.com/users/1144645/screenshots/4004782/hotel.gif" style="height:50px;width:50px;"/>
+                    <br/><h3 style='color:White;'>
+                    Hotels
+                    </h3>
+                </td>
+                <td width='10px'>
+                    <apex:image url="https://www.pinclipart.com/picdir/big/248-2485703_bus-icon-clipart.png" style="height:50px;width:50px;"/>
+                    <br/><h3 style='color:White;'>
+                    Bus Tickets
+                    </h3>
+                </td>
+                <td width='50px'>
+                    <apex:image url="https://images.railyatri.in/wisdoms/original/498.gif" style="height:50px;width:50px;"/>
+                    <br/><h3 style='color:White;'>
+                    Retiering room
+                    </h3>
+                </td>
+                <td width='50px'>
+                    <apex:image url="https://i.pinimg.com/originals/fe/57/3f/fe573f1564356d6da4121bc778c40cee.jpg" style="height:70px;width:50px;"/>
+                    <br/><h3 style='color:White;'>
+                    Lounge
+                    </h3>
+                </td>
+                <td width='50px'>
+                    <apex:image url="https://www.nicepng.com/png/detail/438-4387180_family-icon-family-reunion-people-clip-art.png" style="height:70px;width:50px;margin:0px 20px"/>
+                    <br/><h3 style='color:White;'>
+                    Tour Packages
+                    </h3>
+                </td>
+                <td width='50px'>
+                    <apex:image url="https://www.pngitem.com/pimgs/m/664-6647377_hamburger-factory-train-logo-hamburger-factory-family-restaurant.png" style="height:70px;width:50px;margin:0px 10px"/>
+                    <br/><h3 style='color:White;'>
+                    Tourist Train
+                    </h3>
+                </td>
+                <td width='50px'>
+                    <apex:image url="https://cdn-icons-png.flaticon.com/512/1318/1318635.png" style="height:70px;width:50px;margin:0px 10px"/>
+                    <br/><h3 style='color:White;'>
+                    buddhist Train
+                    </h3>
+                </td>
+                <td width='50px'>
+                    <apex:image url="https://w7.pngwing.com/pngs/802/209/png-transparent-maharajas-express-agra-train-golden-chariot-palace-on-wheels-train.png"
+                                style="height:70px;width:50px;margin:0px 10px"/><apex:image url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIWAYdwCxALlMixTbq8md1yR6ixaAXh8
+                                     gJB_S_jAS86jMrKARaQQy7859lsLsY-YPoCeg&usqp=CAU" style="height:70px;width:50px;margin:0px 10px"/>
+                    <br/><h3 style='color:White;'>
+                    Maharaja Train
+                    </h3>&nbsp;&nbsp;&nbsp;<h3 style='color:White;'>
+                    Golden chariot
+                    </h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='12'>
+                   <center><apex:image url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST5SRHkh3LwkBDdae54bDONKkTR3dxQEXR2w&usqp=CAU" style="width:50px;height:50px"/></center>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='12'>
+                    <center><apex:inputText title="Depart from" style="Padding:20px 30px" html-placeholder="Depart from"/>
+                        <apex:inputText title="Depart from" style="Padding:20px 30px" html-placeholder="Going To"/>
+                    <apex:inputText title="Depart from" style="Padding:20px 30px" html-placeholder="Departure date"/>
+                        <apex:commandButton title="Search" value="Search" style="Padding:23px 50px"/>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </apex:form>
+</apex:page>

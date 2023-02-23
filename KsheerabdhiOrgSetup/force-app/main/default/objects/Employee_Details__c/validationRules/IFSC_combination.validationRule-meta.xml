@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFSC_combination</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(REGEX(IFSC_Code__c ,&quot;^[A-Z]{4}+[0]+[0-9]{6}&quot;))</errorConditionFormula>
+    <errorDisplayField>IFSC_Code__c</errorDisplayField>
+    <errorMessage>Enter Valid IFSC code or Enter values in upper case</errorMessage>
+</ValidationRule>

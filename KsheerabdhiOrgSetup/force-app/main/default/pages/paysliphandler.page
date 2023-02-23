@@ -1,0 +1,44 @@
+<apex:page controller="paysliphandler"  lightningStylesheets="true" >
+    <apex:form >
+        <body style="background-color:#C54E4E;" />
+        <apex:pageBlock title="Delta Tech Pvt. Ltd." >
+            <apex:tabPanel selectedTab="{!currentTab}" id="tabPanel" switchType="client" immediate="true">
+            <apex:tab label="New Employee details" disabled="{!currentTab<>'1'}">
+            <!--apex:tabPanel switchType="client">
+                <apex:tab label="Employee details"-->
+                    <apex:pageBlockSection title="Epmloyee Details forum" collapsible="false"   columns="2" >
+                        <apex:inputfield value="{!emp.Salution__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Name}" style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Last_name__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Date_of_Birth__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Email_ID__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Phone_number__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Aadhar_Number__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Bank_account_Number__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Bank_name__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.date_of_joining__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Department__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.DESIGNATION__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Designation_Level__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.IFSC_Code__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Gender__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.Marital_Status__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.PAN_Number__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.PF_Number__c}"  style="border-style: outset;" />
+                        <apex:inputfield value="{!emp.PF_UAN_Number__c}"  style="border-style: outset;" />
+                        <br/>
+                        <apex:commandButton value="NEXT" action="{!switch}" style="background-color: #FF3D0D; color: White; font-family: 'Lucida Handwriting'; " />
+                    </apex:pageBlockSection>
+                </apex:tab>
+                <apex:tab label="Employee salary details" disabled="{!currentTab<>'2'}">
+                    <apex:pageBlockSection >
+                        <apex:inputfield value="{!sal.BASIC_SALARY__c}"  style="border-style: outset;" />
+                        <br/>
+                        <apex:commandButton action="{!Prev}" value="previous" style="background-color: #FF3D0D; color: White; font:impact; border-radius: 8px; font-family: 'Lucida Handwriting';"  />
+                        <apex:commandButton action="{!saverecord}" value="Submit" style="background-color: #FF3D0D; color: White; font:impact; border-radius: 8px;font-family: 'Lucida Handwriting';" />
+                    </apex:pageBlockSection>
+                </apex:tab>
+            </apex:tabPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

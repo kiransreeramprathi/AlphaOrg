@@ -1,0 +1,15 @@
+<template>
+<lightning-card title="if else block">
+<div class="slds-var-p-around_large">
+<lightning-input label="Enter age" placeholder="Enter age" type="number" onchange={peekaboom} ></lightning-input>
+<template if:true={status}>
+<h1 style="color:green">your are major and your age: {age}</h1>
+</template>
+<template if:false={flag}>
+    <template if:false={status}>
+        <h1 style="color: red" >your are colnel and your age: {age}</h1>
+    </template>
+    </template>
+</div>
+</lightning-card>    
+</template>

@@ -1,0 +1,34 @@
+<apex:page lightningStylesheets="true" title="Project UI Screen 1" controller="ProjectUIScreenController">
+    <apex:form >
+        <apex:pageBlock title="Project Allocation">
+            <apex:pageBlockSection title="Enter Details:" collapsible="false">
+                <table>
+                    <tr>
+                        <td><h4>Project Name:</h4></td>
+                        <td><apex:inputText value="{!projectName}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Employee Name:</h4></td>
+                        <td>
+                            <apex:selectList multiselect="false" size="1" value="{!strselect}">
+                                <apex:selectOptions value="{!options}"/>
+                            </apex:selectList>   
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h4>Client Name:</h4></td>
+                        <td><apex:inputText value="{!Clientname}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Project Duration:</h4></td>
+                        <td><apex:inputText value="{!ProjectDuration}"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><apex:commandButton action="{!submit}" value="Submit" /></td>
+                    </tr>
+                </table>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

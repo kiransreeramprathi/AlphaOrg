@@ -1,0 +1,9 @@
+<aura:component controller="Aura5Helperomp" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="nm" type="string"/>
+    <lightning:card title="Aura 5 demo" iconName="utility:activity">
+        <lightning:input label="enter name" value="{!v.nm}"/><br/>
+        <lightning:button label="Submit1" onclick="{!c.submitmeth1}"/>
+        <lightning:button label="Submit2" onclick="{!c.submitmeth2}"/>
+        <lightning:button label="Submit3" onclick="{!c.submitmeth3}"/>
+    </lightning:card>
+</aura:component>

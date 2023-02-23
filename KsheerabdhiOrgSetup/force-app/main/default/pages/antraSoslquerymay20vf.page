@@ -1,0 +1,32 @@
+<apex:page controller="soslqueryma20" lightningStylesheets="true" title="Sosl practice">
+    <apex:pageBlock title="Fetch records">
+        <apex:pageBlockSection title="Enter details" collapsible="false">
+            <apex:form >
+                Enter Name: <apex:inputtext value="{!input1}" label="Enter character"  /><br/>
+                <apex:commandButton action="{!method1}" value="Search"/>
+            </apex:form>
+            <center><apex:tabPanel >
+                <apex:tab label="Account">
+                    <apex:pageBlockTable title="Accounts" value="{!dispacc}" var="da">
+                        <apex:column value="{!da.name}"/>
+                        <apex:column value="{!da.phone}"/>
+                        <apex:column value="{!da.Type}"/>
+            </apex:pageBlockTable>
+                </apex:tab>
+                <apex:tab label="opportunity">
+                    <apex:pageBlockTable title="Opportunities" value="{!dispopp}" var="do">
+                        <apex:column value="{!do.name}"/>
+                        <apex:column value="{!do.amount}"/>
+            </apex:pageBlockTable>
+                </apex:tab>
+                <apex:tab label="Contact">
+                    <apex:pageBlockTable title="Opportunities" value="{!discon}" var="co">
+                        <apex:column value="{!co.name}"/>
+                        <apex:column value="{!co.Email}"/>
+            </apex:pageBlockTable>
+                </apex:tab>
+            </apex:tabPanel></center>
+        </apex:pageBlockSection>
+        <apex:pageMessages />
+    </apex:pageBlock>
+</apex:page>

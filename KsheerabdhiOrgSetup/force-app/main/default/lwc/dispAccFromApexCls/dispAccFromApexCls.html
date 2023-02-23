@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Account List From Apex" icon-name="custom:custom63">
+            <div class="slds-m-around_medium">
+                <lightning-input label="Account name" style="width:15rem;" onchange={acnameHandler}></lightning-input><br/><br/>
+                <template if:true={act.data}>
+                    <template for:each={act.data} for:item="acc">
+                        <p key={acc.Id}>{acc.Name}&nbsp;&nbsp;&nbsp;
+                            {acc.Phone}&nbsp;&nbsp;&nbsp;
+                            {acc.Industry}&nbsp;&nbsp;&nbsp;</p>
+                    </template>
+                </template>
+                <template if:true={act.error}>
+                    <p>No records found mama</p>
+                </template>
+            </div>
+        </lightning-card>
+</template>

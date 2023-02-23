@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="result" type="string" access="public"/>
+    <aura:handler event="c:ApplicationComponentEvent" action="{!c.dispresult}" />
+    <lightning:card title="App event display">
+    <div>
+        sum of two numbers:{!v.result}
+        </div>
+    </lightning:card>
+</aura:component>

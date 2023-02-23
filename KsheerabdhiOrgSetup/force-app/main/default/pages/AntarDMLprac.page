@@ -1,0 +1,40 @@
+<apex:page controller="AntraDmlprac" title="DML Operation practice" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="DML Operation practice">
+            <apex:pageBlockSection title="Delete Operation" collapsible="false">
+                <center><table border='1' style='align:center'>
+                    <tr>
+                        <td>
+                           <apex:inputText value="{!input}" label="Employee Id"/><br/> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:commandButton action="{!search}" value="Search" style="align:right" /><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <center><apex:outputtext value="{!opname}" /></center><br/> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <apex:inputtext value="{!Mobile}" label="Mobile number"/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <apex:commandButton action="{!updatevalue}" value="update" style="align:right" /><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:outputText value="{!opmsg}" /><br/>
+                        </td>
+                    </tr>
+                </table></center>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leave_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Leave Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Leave_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Marriage</fullName>
+                <default>false</default>
+                <label>Marriage</label>
+            </value>
+            <value>
+                <fullName>Maternity leave</fullName>
+                <default>false</default>
+                <label>Maternity leave</label>
+            </value>
+            <value>
+                <fullName>Medically Unfit</fullName>
+                <default>false</default>
+                <label>Medically Unfit</label>
+            </value>
+            <value>
+                <fullName>Personal</fullName>
+                <default>false</default>
+                <label>Personal</label>
+            </value>
+            <value>
+                <fullName>Personal Reason</fullName>
+                <default>false</default>
+                <label>Personal Reason</label>
+            </value>
+            <value>
+                <fullName>Relative / Friend marriage</fullName>
+                <default>false</default>
+                <label>Relative / Friend marriage</label>
+            </value>
+            <value>
+                <fullName>Ritual</fullName>
+                <default>false</default>
+                <label>Ritual</label>
+            </value>
+            <value>
+                <fullName>Sick</fullName>
+                <default>false</default>
+                <label>Sick</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Vacation</fullName>
+                <default>false</default>
+                <label>Vacation</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>casual leave</controllingFieldValue>
+            <valueName>Personal Reason</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>casual leave</controllingFieldValue>
+            <valueName>Relative / Friend marriage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>casual leave</controllingFieldValue>
+            <valueName>Ritual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>earned leave</controllingFieldValue>
+            <valueName>Marriage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>earned leave</controllingFieldValue>
+            <valueName>Personal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>earned leave</controllingFieldValue>
+            <valueName>Travel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>earned leave</controllingFieldValue>
+            <valueName>Vacation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>maternity leave</controllingFieldValue>
+            <valueName>Maternity leave</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>medical leave</controllingFieldValue>
+            <valueName>Medically Unfit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>medical leave</controllingFieldValue>
+            <valueName>Sick</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

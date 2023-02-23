@@ -1,0 +1,118 @@
+<apex:page >
+    <style>
+    .cls{font-size:30px;
+        }
+    </style>
+    <apex:form >
+        <table border="0" width="100%" style="background-color:#d4379b">
+            <tr>
+                <td width="200px">
+                    <apex:image url="https://cdn1.tripoto.com/assets/2.9/img/logo/tripoto.svg" />
+                </td>
+                <td width="600px">
+                    <apex:inputText title="search" html-placeholder="Search for hotels" style="padding:15px 190px;margin:0px 50px;border-radius: 10px;"/>
+                </td>
+                <td>
+                    <apex:selectList style="padding:15px 20px;border-radius: 10px;background-color:#d4379b;color:white;font-size:20px;">
+                        <apex:selectOption itemLabel="Inspirations" itemValue="ins"/>
+                    </apex:selectList> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:outputLink value="https://www.tripoto.com/" ><font style="font-size: 20px;color:white">Forum</font></apex:outputLink>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:outputLink value="https://www.tripoto.com/" ><font style="font-size: 20px;color:white">Holidays</font></apex:outputLink>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:selectList style="padding:15px 20px;border-radius: 10px;background-color:#d4379b;color:white;font-size:20px;">
+                        <apex:selectOption itemLabel="Publish Trip" itemValue="pt"/>
+                    </apex:selectList>&nbsp;
+                    <apex:outputLink value="https://www.tripoto.com/" ><font style="font-size: 20px;color:white">Sign In</font></apex:outputLink>
+                </td>
+            </tr>
+        </table>
+        <table border="1" width="100%" height="100px">
+            <br/>
+            <tr>
+                <td colspan="5">
+                    <div>
+                        <h1 style="font-size: 20px;padding-left:90px;">
+                            Culinary experiences you can't Miss in Dubai
+                        </h1>
+                    </div>
+                    <h6 style="font-size: 10px;padding-left:90px;">
+                        Find out what it's street vendors and Michelin-starred chefs are up to and carve your own food trail in Dubai!
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left:90px;" width="500px"><apex:image url="https://cdn1.tripoto.com/media/filter/tst/img/840131/Image/1583327477_goa.jpg" style="border-radius: 10px;" width="350px"/></td><br/>
+                <td width="500px"><apex:image url="https://cdn1.tripoto.com/media/filter/tst/img/840131/Image/1583327520_singapore.jpg" style="border-radius: 10px;"  width="350px"/></td>
+                <td><apex:image url="https://cdn1.tripoto.com/media/filter/tst/img/840131/Image/1583327540_delhi.jpg" style="border-radius: 10px;"  width="350px"/></td><br/>
+            </tr>
+            <tr>
+                <td><h6 style="padding-left:90px;font-size: 17px;">
+                    The Ultimate Dubai Gourmet Trail
+                    </h6><br/>
+                    <span style="padding-left:90px">By<font style="color:skyblue">Sarah Walton</font></span>
+                </td>
+                <td>
+                    <h6 style="font-size: 17px;">
+                        6 Must Try Restaurents,Bar And Kitchen in
+                    </h6><br/>
+                    <h6 style="font-size: 17px;">
+                        Dubai For Your Next Visit
+                    </h6><br/>
+                    <span>By<font style="color:skyblue">Vandana Goenka</font></span>
+                </td>
+                <td>
+                    <h6 style="font-size: 17px;">
+                        Middle Eastern Culinary Experiences in
+                    </h6><br/>
+                    <h6 style="font-size: 17px;">
+                        Dubai
+                    </h6><br/>
+                    <span>By<font style="color:skyblue">Aditi Jana </font></span>
+                </td>
+            </tr>
+           
+        </table><br/>
+        <table width="100%" style="border-top:1px solid black;" border='0'>
+            <tr>
+                <td>
+                    <apex:image url="https://cdn1.tripoto.com/assets/2.9/img/logo/tripoto.svg" style="padding-left:50px;background-color:lightblue;"/><br/>
+                    <font style="padding-left:50px">The Global Travel Community</font><br/>
+                    <!--apex:image value="{!$resource.trsl1}" style="padding-left:45px"/-->
+                </td>
+                <td>
+                    <h6 style="font-size: 15px;">
+                        About Tripoto
+                    </h6><br/><br/>
+                    <font>How it works</font><br/><br/>
+                    <font>FAQ's</font><br/><br/>
+                    <font>Privacy Policy</font>
+                </td>
+                <td>
+                    <h6 style="font-size: 15px;">
+                        Products
+                    </h6><br/><br/>
+                    <font>Tour Packages</font><br/><br/>
+                    <font>Travel Guides</font><br/><br/>
+                    <font>Trips and Itineraries</font>
+                </td>
+                <td>
+                    <h6 style="font-size: 15px;">
+                        Important Travel Links
+                    </h6><br/><br/>
+                    <font>Goa Tourism</font><br/><br/>
+                    <font>Dubai Tourism</font><br/><br/>
+                    <font>Singapore Tourism</font>
+                </td>
+                <td>
+                    <h6 style="font-size: 15px;">
+                        Partner Programs
+                    </h6><br/><br/>
+                    <font>Buy Travel Leads</font><br/><br/>
+                    <font>Partner With Us</font><br/><br/>
+                    <font>Earn Credits</font>
+                </td>
+            </tr>
+        </table>
+    </apex:form>
+</apex:page>

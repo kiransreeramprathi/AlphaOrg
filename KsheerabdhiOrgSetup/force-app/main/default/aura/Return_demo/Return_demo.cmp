@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" name="opmsg" type="integer"/>
+    <lightning:card>
+        <div>
+            <center><h1>Reurtning of numbers</h1></center>
+            <lightning:button label="calculate" onclick="{!c.square}" /><br/><br/>
+            <h1>square of two numbers is : {!v.opmsg}</h1>
+        </div>
+    </lightning:card>
+</aura:component>

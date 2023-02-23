@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="enmp" type="String"/>
+    <aura:attribute name="emlp" type="String"/>
+    <aura:handler name="sampleCmpEvent" event="c:componentEventDemo" action="{!c.parentComponentEvent}"/> 
+    <c:ceChild/>
+    <lightning:card title="CE Parent" iconName="standard:budget">
+        <div class="slds-p-left_medium"> 
+            <p style="color:red">{!v.enmp}</p> 
+            <p style="color:red">{!v.emlp}</p>
+        </div>
+    </lightning:card>
+</aura:component>

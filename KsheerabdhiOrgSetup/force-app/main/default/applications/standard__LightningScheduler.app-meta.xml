@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Salesforce Scheduler Setup</label>
+    <navType>Standard</navType>
+    <tabs>standard-LightningSchedulerSetupAssistant</tabs>
+    <tabs>standard-ServiceTerritory</tabs>
+    <tabs>standard-ServiceResource</tabs>
+    <tabs>standard-WorkTypeGroup</tabs>
+    <tabs>standard-WorkType</tabs>
+    <tabs>standard-OperatingHours</tabs>
+    <tabs>standard-ServiceAppointment</tabs>
+    <tabs>Discount_request__c</tabs>
+    <tabs>Employee_Details__c</tabs>
+    <tabs>Salary_Record__c</tabs>
+    <tabs>Leaves__c</tabs>
+    <tabs>Pay_slip__c</tabs>
+    <tabs>Antra_Department__c</tabs>
+    <tabs>Antra_Employee__c</tabs>
+    <tabs>Antra_Employee_Leaves__c</tabs>
+    <tabs>Question__c</tabs>
+    <tabs>Pizza_Creator</tabs>
+    <tabs>Contact_Relationship__c</tabs>
+    <tabs>Spoonacular</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

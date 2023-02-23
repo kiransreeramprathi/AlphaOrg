@@ -1,0 +1,15 @@
+<template>
+ <lightning-card title="Dynamic Css">
+    <div class="slds-var-m-around_medium">
+        <lightning-input type="number" value={percent} label="Percentage" onchange={cangeHandler} ></lightning-input>
+        <br/><br/>
+        <div class="slds-progress-bar slds-progress-bar_large slds-progress-bar_circular" aria-valuemin="0" aria-valuemax="100" 
+        aria-valuenow="1"
+         aria-label="Placeholder for description of progress bar" role="progressbar">
+            <span class="slds-progress-bar__value" style={percentage}>
+                <!-- <span>Progress:{percentage}</span> -->
+                </span>
+        </div>
+    </div>
+ </lightning-card>   
+</template>

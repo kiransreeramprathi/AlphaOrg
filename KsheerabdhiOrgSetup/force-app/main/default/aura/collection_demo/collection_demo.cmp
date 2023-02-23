@@ -1,0 +1,25 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="global" name="states" type="list" default="['Andhra pradesh','Telengana','karnataka','Tamil nadu','kerla']"/>
+    <aura:attribute access="global" name="Capital" type="set" default="['Vijayawada','Hyderabad','Banglore','Chennai','Kochi']"/>
+    <aura:attribute access="global" name="status" type="boolean" default="false"/>
+    <lightning:card title="states and capitals"><br/>
+        <div>
+            <aura:if istrue="{!status}">
+                <ul class="slds-list_dotted">
+                    <h3 class="font">STATES</h3>
+                    <aura:iteration items="{!v.states}" var="sta">
+                        <li>{!sta}</li>
+                    </aura:iteration>
+                </ul>
+                <aura:set attribute="else">
+                    <ol class="slds-list_ordered" title="Capitals">
+                        <h3 class="font">CAPITALS</h3>
+                        <aura:iteration items="{!v.Capital}" var="cap">
+                            <li>{!cap}</li>
+                        </aura:iteration>
+                    </ol>
+                </aura:set>
+            </aura:if>
+        </div>
+    </lightning:card>
+</aura:component>

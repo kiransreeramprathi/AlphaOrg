@@ -1,0 +1,19 @@
+<apex:page standardController="Account" lightningStylesheets="true" >
+    <apex:form >
+	<apex:pageBlock title="output values">
+       <apex:pageBlockSection title="BS1" collapsible="true" columns="2">
+           <apex:outputText value="{!account.Name}"></apex:outputText>
+           <apex:outputText value="{!account.Industry}"></apex:outputText>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+        <br/>
+		<apex:pageBlock title="input values">
+       <apex:pageBlockSection title="BS2" collapsible="true" columns="2">
+           <apex:inputText value="{!account.Name}"/>
+           <apex:inputfield value="{!account.Industry}"/>
+           <apex:commandButton action="{!save}" value="save"/>
+           <apex:commandButton action="{!cancel}" value="Abort"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>          
+    </apex:form>
+</apex:page>

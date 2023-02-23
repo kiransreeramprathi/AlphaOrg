@@ -1,0 +1,20 @@
+<apex:page standardController="Employee_Details__c" recordSetVar="Employee_Details__c" lightningStylesheets="true" title="Page nation" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection collapsible="false" title="Page Nation">
+                <apex:dataTable value="{!Employee_Details__c}" var="e" style="Border:1px" >
+                    <apex:column value="{!e.Name}" headerValue="Name" />
+                    <apex:column value="{!e.Employee_ID__c}" headerValue="Employee ID" />
+                    <apex:column value="{!e.Date_of_Birth__c}" headerValue="Employee DOB" />
+                    <apex:column value="{!e.Email_ID__c}" headerValue="Email ID" />
+                </apex:dataTable>
+            </apex:pageBlockSection>
+            <apex:panelGrid columns="4">
+                <apex:commandButton action="{!first}" value="First"/>
+                <apex:commandButton action="{!next}" value="Next"/>
+                <apex:commandButton action="{!previous}" value="PREVIOUS"/>
+                <apex:commandButton action="{!last}" value="LAST"/>
+            </apex:panelGrid>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

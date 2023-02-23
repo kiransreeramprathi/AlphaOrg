@@ -1,0 +1,12 @@
+<template>
+   <lightning-card title="Child to Parent communication">
+    <div class="slds-var-m-around_medium">
+        <lightning-button label="ShowModal" onclick={clickHandler}>
+        </lightning-button>
+        <h1>{msg}</h1>
+        <template if:true={showModal}>
+            <c-ctp-child-comp onclose={closeHandler} ></c-ctp-child-comp>
+        </template>
+    </div>
+   </lightning-card> 
+</template>

@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute access="public" name="Cadidate_Name" type="string"/>
+    <aura:attribute access="public" name="Age" type="integer"/>
+    <aura:attribute access="public" name="Cadidate_Gender" type="string"/>
+    <aura:attribute access="public" name="status" type="boolean" />
+    <aura:attribute access="public" name="output_message" type="string"/>
+    <lightning:card title="Vote Elgibility" iconName="standard:employee">
+        <lightning:input label="Name" value="{!v.Cadidate_Name}"/><br/>
+        <lightning:input label="Age" value="{!v.Age}"/><br/>
+        <lightning:input label="Gender" value="{!v.output_message}"/><br/>
+        <lightning:button label="Submit" onclick="{!c.castvote}" class="butst"/><br/><br/>
+        <aura:if istrue="{v.status}">
+            <h1 class="otst">Mr.{!v.Cadidate_Name} {!v.output_message}</h1>
+            <aura:set attribute="else">
+                <h1 class="otst">Ms.{!v.Cadidate_Name} {!v.output_message}</h1>
+            </aura:set>
+        </aura:if>
+    </lightning:card>
+</aura:component>

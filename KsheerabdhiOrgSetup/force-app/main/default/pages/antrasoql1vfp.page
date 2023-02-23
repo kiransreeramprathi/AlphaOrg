@@ -1,0 +1,20 @@
+<apex:page controller="antrasoql1" lightningStylesheets="true" title="Soql partice 1">
+    <apex:form >
+        <apex:pageBlock title="Employee details">
+            <apex:pageBlockSection title="section 1" collapsible="true">
+                        Enter employee name:&nbsp;&nbsp;&nbsp;
+                    <apex:inputText Value="{!emp}"/>&nbsp;&nbsp;&nbsp;<apex:commandButton action="{!submit}" value="search"/><br/>
+                    <apex:pageBlockTable value="{!acc}" var="a" style="margin-left:0px">
+                        <apex:column value="{!a.Name}"/>
+                    <apex:column value="{!a.Last_name__c}"/>
+                    <apex:column value="{!a.Employee_name__c}"/>
+                    <apex:column value="{!a.Date_of_Birth__c}"/>
+                    <apex:column value="{!a.Age__c}"/>
+                    <apex:column value="{!a.date_of_joining__c}"/>
+                    <apex:column value="{!a.Employee_ID__c}"/>
+                    </apex:pageBlockTable>
+                <apex:outputText value="{!opval}" label="Total Record count"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<template>
+  <lightning-card>
+    <div class="slds-p-around_medium">
+        <template if:false={status}>
+            <lightning-button label="Show Child" variant="success" onclick={clickHandler} ></lightning-button>
+        </template>
+        <template if:true={status}>
+            <lightning-button label="remove Child" variant="destructive" onclick={clickHandler} ></lightning-button>
+        </template>
+        <br/>
+        <template if:true={status}>
+            <c-lch-child-comp></c-lch-child-comp>
+        </template>
+    </div>
+  </lightning-card>  
+</template>

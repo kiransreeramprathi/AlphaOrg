@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DESIGNATION__c</fullName>
+    <externalId>false</externalId>
+    <label>Designation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Product Marketing</fullName>
+                <default>false</default>
+                <label>Product Marketing</label>
+            </value>
+            <value>
+                <fullName>Product Planning</fullName>
+                <default>false</default>
+                <label>Product Planning</label>
+            </value>
+            <value>
+                <fullName>Corporate Marketing</fullName>
+                <default>false</default>
+                <label>Corporate Marketing</label>
+            </value>
+            <value>
+                <fullName>Marketing communications</fullName>
+                <default>false</default>
+                <label>Marketing communications</label>
+            </value>
+            <value>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+                <label>Business Development</label>
+            </value>
+            <value>
+                <fullName>Distribution</fullName>
+                <default>false</default>
+                <label>Distribution</label>
+            </value>
+            <value>
+                <fullName>Program Management</fullName>
+                <default>false</default>
+                <label>Program Management</label>
+            </value>
+            <value>
+                <fullName>Release Management</fullName>
+                <default>false</default>
+                <label>Release Management</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>Development</fullName>
+                <default>false</default>
+                <label>Development</label>
+            </value>
+            <value>
+                <fullName>Quality Assurance</fullName>
+                <default>false</default>
+                <label>Quality Assurance</label>
+            </value>
+            <value>
+                <fullName>User Experience</fullName>
+                <default>false</default>
+                <label>User Experience</label>
+            </value>
+            <value>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+                <label>Accounting</label>
+            </value>
+            <value>
+                <fullName>Human Resource</fullName>
+                <default>false</default>
+                <label>Human Resource</label>
+            </value>
+            <value>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+                <label>Information Technology</label>
+            </value>
+            <value>
+                <fullName>Legal Service</fullName>
+                <default>false</default>
+                <label>Legal Service</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS MANAGEMENT</controllingFieldValue>
+            <valueName>Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS MANAGEMENT</controllingFieldValue>
+            <valueName>Human Resource</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS MANAGEMENT</controllingFieldValue>
+            <valueName>Information Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BUSINESS MANAGEMENT</controllingFieldValue>
+            <valueName>Legal Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>Quality Assurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINEERING</controllingFieldValue>
+            <valueName>User Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MARKETING</controllingFieldValue>
+            <valueName>Corporate Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MARKETING</controllingFieldValue>
+            <valueName>Marketing communications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OPERATIONS</controllingFieldValue>
+            <valueName>Business Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OPERATIONS</controllingFieldValue>
+            <valueName>Distribution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OPERATIONS</controllingFieldValue>
+            <valueName>Program Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OPERATIONS</controllingFieldValue>
+            <valueName>Release Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OPERATIONS</controllingFieldValue>
+            <valueName>Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OPERATIONS</controllingFieldValue>
+            <valueName>Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRODUCT MANAGEMENT</controllingFieldValue>
+            <valueName>Product Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PRODUCT MANAGEMENT</controllingFieldValue>
+            <valueName>Product Planning</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

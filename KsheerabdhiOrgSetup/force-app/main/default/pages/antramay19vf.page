@@ -1,0 +1,17 @@
+<apex:page controller="antramay19hand" lightningStylesheets="true" title="May 19">
+    <apex:form >
+        <apex:pageBlock title="May 19 parctice">
+            <apex:pageBlockSection title="Employee records" collapsible="false">
+                <apex:inputText label="Employee name" value="{!ename}" /><br/>
+                <apex:inputText label="Employee age" value="{!age}"/><br/>
+                <apex:inputText label="Employee email" value="{!email}"/><br/>
+                <apex:commandButton value="Search" action="{!search}"/>
+              <center>  <apex:pageBlockTable var="e" value="{!emptyli}">
+                    <apex:column value="{!e.Name}"/>
+                    <apex:column value="{!e.Age__c}"/>
+                    <apex:column value="{!e.Email_ID__c}"/>
+                </apex:pageBlockTable></center>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

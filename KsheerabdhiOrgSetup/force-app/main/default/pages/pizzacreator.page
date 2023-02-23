@@ -1,0 +1,198 @@
+<apex:page lightningStylesheets="true" controller="PizaaCreatorsController">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+    }
+    .tab {
+        list-style: none;
+        float: left;
+        border: 0px solid black;
+        background-color: white;
+        width: 17%;
+        height: 302px;
+        
+    }
+    
+    
+    .tab a {
+        display: block;
+        padding: 11.5px 15px;
+        text-decoration: none;
+        background-color: inherit;
+        color: black; 
+        transition: 0.3s;
+        font-size: 17px;
+        border-bottom: 1px solid grey;
+    }
+    .tab a:hover {
+        background-color: #66ff66;
+        color:white;
+    }
+    
+    .tabContent {
+        margin-left: 200px;
+        min-height: 300px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    
+    .tab a.active {
+        background: #00ff00;
+    }
+    .tabContent .tabBox {
+        display: none
+    }
+    .tabContent .activeTab {
+        display: block
+    }
+    .header-content-inner img {
+        float: left;   
+    }
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .column1 {
+        float: right;
+        width: 50%;
+        padding: 10px;
+        
+        
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    </style>
+    <script>
+        $(document).ready(function(){
+        $('.tab a').click(function(){
+            var tabId = $(this).attr('href');
+            $('.tab a').removeClass('active');
+            $(this).addClass('active');
+            $('.tabContent .tabBox').removeClass('activeTab');
+            $(tabId).addClass('activeTab')
+        });z
+    });
+    </script>
+    <header>
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <img id="theLogo" src="https://cdn.dribbble.com/users/2549306/screenshots/16008572/media/5e25bfa523802dc70247014920d4d530.png?compress=1&resize=400x300" width="85" height="85"/>
+                <h1 style="font-size: 20px;display:inline-block;vertical-align:120%;" >
+                    Pizza order Creator
+                </h1>
+            </apex:pageBlockSection>    
+        </apex:pageBlock>
+    </header>
+    <ul class="tab" >
+        <li><a class="active" href="#tab1">Size</a></li>
+        <li><a href="#tab2">Cheese</a></li>
+        <li><a href="#tab3">Sauce</a></li>
+        <li><a href="#tab4">Crust</a></li>
+        <li><a href="#tab5">Toppings</a></li>
+        <li><a href="#tab6">Crust Flavour</a></li>
+    </ul>  
+    <apex:form id="refresh" >
+        <div class="tabContent">
+            <div class="tabBox activeTab" id="tab1">
+                
+                <apex:selectRadio layout="pageDirection" value="{!SizeSelected}"  > <h3>Select Size</h3> 
+                    <apex:actionSupport event="onclick" action="{!Selectsize}" reRender="size, total" />
+                    <apex:selectOptions value="{!Sizeoptions}"/>
+                </apex:selectRadio>
+            </div>
+            <div class="tabBox" id="tab2">
+                <apex:selectCheckboxes value="{!CheeseSelected}" layout="pageDirection">
+                    <apex:actionSupport event="onclick" action="{!Selectcheese}" reRender="cheese, total"  />
+                    <apex:selectOptions value="{!cheeseoptions}"> </apex:selectOptions>
+                </apex:selectCheckboxes>
+            </div>
+            <div class="tabBox" id="tab3"> 
+                
+                <apex:selectRadio layout="pageDirection" value="{!SauceSelected}"><h3>Select Sauce</h3>
+                    <apex:actionSupport event="onclick" action="{!SelectSauce}" reRender="sauce, total" />
+                    <apex:selectOptions value="{!sauceoptions}"></apex:selectOptions>
+                    
+                </apex:selectRadio>                                    
+            </div>
+            <div class="tabBox" id="tab4">
+                
+                <apex:selectRadio layout="pageDirection" value="{!crustSelected}"><h3>Choose Crust</h3>
+                    <apex:actionSupport event="onclick" action="{!Selectcrust}"  reRender="crust, total" />
+                    <apex:selectOptions value="{!Crustoptions}"></apex:selectOptions>
+                </apex:selectRadio></div>
+            <div class="tabBox" id="tab5">
+                <div class="column" >
+                    <apex:selectCheckboxes layout="pageDirection" value="{!VeggiesSelected}" ><h3>Veggies</h3>
+                        <apex:actionSupport event="onclick" action="{!SelectVeggies}"  reRender="ToppingsVeggies, total" />
+                        <apex:selectOptions value="{!Veggiesoptions}"></apex:selectOptions>
+                    </apex:selectCheckboxes>
+                </div> 
+                <div  >
+                    <apex:selectCheckboxes layout="pageDirection" value="{!MeatsSelected}"  ><h3>Meats</h3>
+                        <apex:actionSupport event="onclick" action="{!SelectMeats}"  reRender="ToppingsMeats, total" />
+                        <apex:selectOptions value="{!Meatsoptions}"></apex:selectOptions>
+                    </apex:selectCheckboxes>
+                </div>
+            </div>
+            
+            <div class="tabBox" id="tab6">
+                <apex:selectCheckboxes layout="pageDirection" value="{!CrustFlavourSelected}"><h3>Crust Flavour</h3>
+                    <apex:actionSupport event="onclick" action="{!SelectCrustFlavour}"  reRender="CrustFlavour, total" />
+                    <apex:selectOptions value="{!CrustFlavouroptions}"></apex:selectOptions>
+                    
+                </apex:selectCheckboxes>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div  >
+            <apex:pageMessages ></apex:pageMessages>
+            <table>
+                <tr>
+                    <td><b style='margin:0px 80px'>Size:</b></td>
+                    <td><apex:OutputText value="{!outputSize}" id="size"  ></apex:OutputText></td>
+                </tr>
+                <tr>
+                    <td><b style='margin:0px 80px'>Sauce:</b></td>
+                    <td><apex:OutputText value="{!outputsauce}" id="sauce"  /></td>
+                </tr>
+                <tr>
+                    <td><b style='margin:0px 80px'>Cheese:</b></td>
+                    <td><apex:OutputText value="{!outputcheese}" id="cheese"  /></td>
+                </tr>
+                <tr>
+                    <td><b style='margin:0px 80px'>Toppings Veggies:</b></td>
+                    <td><apex:OutputText value="{!outputVeggies}" id="ToppingsVeggies"  /></td>
+                </tr>
+                <tr>
+                    <td><b style='margin:0px 80px'>Toppings Meats:</b></td>
+                    <td><apex:OutputText value="{!outputMeats}" id="ToppingsMeats"  /></td>
+                </tr>
+                <tr>
+                    <td><b style='margin:0px 80px'>Crust:</b></td>
+                    <td><apex:OutputText value="{!outputcrust}" id="crust" /></td>
+                </tr>
+                <tr>
+                    <td><b style='margin:0px 80px'>Crust Flavour:</b></td>
+                    <td><apex:OutputText value="{!outputCrustFlavour}" id="CrustFlavour"  /> </td>
+                </tr>
+            </table>
+            <b style='margin:0px 80px'>Pizza Cost:</b>&nbsp;&nbsp;&nbsp;<apex:inputText style="padding:5px 5px;border: 2px solid DarkBlue; border-radius: 8px" value="{!Total}" id="total"  >
+            
+            </apex:inputText><br/><br/><br/>
+            <apex:commandButton value="Create Order +" action="{!calculation}" style="margin:0px 120px;Padding:5px 60px;color:white;background-color: #0066ff!important;border-radius:10px" />
+            <br/><br/><br/>
+            
+        </div>
+    </apex:form>
+</apex:page>

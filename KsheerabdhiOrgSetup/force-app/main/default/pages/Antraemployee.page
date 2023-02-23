@@ -1,0 +1,13 @@
+<apex:page controller="AntraEmployeeHandler" lightningStylesheets="true">
+    <apex:form style="background-color:blue">
+        <apex:pageBlock title="Employee form" tabStyle="Antra_Employee__c" >
+            <apex:pageBlockSection collapsible="false" title="Enter employee details" columns="1">
+                <apex:inputText value="{!efname}" label="Employee first Name:" style="background-color:#e0ccb8;color:blue"/>
+                <apex:inputText value="{!elname}" label="Employeelast Name:" style="background-color:#e0ccb8;color:blue"/>
+                <apex:inputText value="{!embno}" label="Employee Mobile number:" style="background-color:#e0ccb8;color:blue"/>
+                <apex:inputText value="{!eadd}" label="Employee Street:" style="background-color:#e0ccb8;color:blue"/>
+                <apex:commandButton action="{!insertRec}" title="Submit" value="Submit"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

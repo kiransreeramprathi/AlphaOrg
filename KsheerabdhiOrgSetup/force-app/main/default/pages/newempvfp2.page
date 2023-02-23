@@ -1,0 +1,13 @@
+<apex:page controller="newemployeevfpage" lightningStylesheets="true" docType="html-5.0" >
+    <apex:form id="value" >
+        <body style="background-color:#8c9966;" />
+        <apex:pageBlock title="DELTA SOLUTIONS" >
+            <apex:pageBlockSection title="Salary Details" collapsible="false" columns="2">
+                <apex:inputText value="{!basicsalary}" label="Basic salary" html-placeholder="Enter Basic salary"  />
+                <br/>
+                <apex:commandButton action="{!prev}" value="Back" style="background-color:#d4d4c4"/>
+                <apex:commandButton action="{!submit}" value="Submit" style="background-color:#d4d4c4" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

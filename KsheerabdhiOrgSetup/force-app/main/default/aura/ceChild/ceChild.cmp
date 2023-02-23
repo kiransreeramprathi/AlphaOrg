@@ -1,0 +1,13 @@
+<aura:component access="global" >
+    <aura:attribute name="enmc" type="String"/>
+    <aura:attribute name="emlc" type="String"/>
+    <aura:registerEvent name="sampleCmpEvent" type="c:componentEventDemo"/>
+    <lightning:card title="CE Child" iconName="standard:budget">
+        <div class="slds-p-left_medium">
+            <lightning:input style="width:15rem" label="Emp name" value="{!v.enmc}"/>
+            <lightning:input type="Email" style="width:15rem" label="Email Id" value="{!v.emlc}"/>
+            <br/><br/>
+            <lightning:button variant="brand" label="Submit" onclick="{!c.displayOnParent}" />
+        </div>
+    </lightning:card>
+</aura:component>

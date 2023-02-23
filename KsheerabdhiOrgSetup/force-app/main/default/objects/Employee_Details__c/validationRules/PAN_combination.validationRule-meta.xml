@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PAN_combination</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(REGEX(  PAN_Number__c  ,&quot;^[A-Za-z]{5}+[0-9]{4}+[A-Z]{1}&quot;))</errorConditionFormula>
+    <errorDisplayField>PAN_Number__c</errorDisplayField>
+    <errorMessage>Enter Valid PAN NUMBER or Enter alphabets in uppercase</errorMessage>
+</ValidationRule>

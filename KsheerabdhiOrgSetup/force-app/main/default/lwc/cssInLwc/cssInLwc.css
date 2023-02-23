@@ -1,0 +1,9 @@
+p{
+    color:green;
+    font-size: 30px;
+    border: 1px solid red;
+}
+.user:hover{
+font-size: 30px;
+color: blue;
+}

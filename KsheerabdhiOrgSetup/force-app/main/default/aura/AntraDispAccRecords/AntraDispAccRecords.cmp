@@ -1,0 +1,33 @@
+<aura:component controller="AntraDispAccRecAuraClass" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.fetchrecords}"/>
+    <aura:attribute name="acd" type="List"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="status" type="boolean"/>
+    <aura:attribute name="errMsg" type="string"/>
+    <lightning:card title="Display Account records">
+        <div class="slds-p-around_medium">
+            <!--lightning:button label="Fetch" onclick="{!c.fetchrecords}"/-->
+            <br/><br/>
+            <aura:if isTrue="{!v.status}">
+                <div class="slds-grid slds-wrap">
+                    <aura:iteration items="{!v.acd}" var="ac">
+                        <div class="slds-col slds-size_1-of-4 slds-p-around_small">
+                            <lightning:card title="{!ac.Name}">
+                                <div class="slds-p-around_medium">
+                                    <p>{!ac.Type}</p>
+                                    <p>{!ac.Phone}</p>
+                                    <p>{!ac.BillingCity}</p>
+                                    <p>{!ac.Website}</p>
+                                    <p>{!ac.Industry}</p>
+                                </div>
+                            </lightning:card>
+                        </div>
+                    </aura:iteration>
+                </div>
+                <aura:set attribute="else">
+                    <div class="mst">{!v.errMsg}</div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </lightning:card>
+</aura:component>
